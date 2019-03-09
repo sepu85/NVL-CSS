@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ejercicio Final HTML/CSS</title>
+	<style type="text/css">
+		.header {
+		  padding: 40px;
+		  text-align: center;
+		  background: #1abc9c;
+		  color: white;
+		  font-size: 30px;
+		  width: inherit;
+		  margin: inherit;
+
+		}
+		.footer {
+			background-color: grey;
+			color: white;
+			width: 100%;
+			height: 80px;
+			display: inline-block;
+			padding: 20px;
+			width: inherit;
+			margin: inherit;
+			text-align: center;
+
+		}
+
+		.columna {
+			display: inline;
+			height: 1000px;
+			/*max-width: 33%;*/
+			overflow: auto;
+			margin: 7px;
+			padding: 20px;
+			border-radius: 15px;
+			width: 31%
+
+		}
+
+		#c1 {
+			float: left;
+			background-color: yellow;
+			font-size: 18px;
+		}
+		#c2 {
+			float: left;
+			background-color: lightblue;
+		}
+		#c3 {
+			float: left;
+			background-color: #fabada;
+			text-align: center;
+			font-size: 20px;
+		}
+
+		body {
+			height: 100%;
+			width: 100%;
+			margin: 0 auto;
+		}
+		.box {
+			padding: 15px;
+			background-color: white;
+			/*height: 300px;*/
+			border-radius: 15px;
+			margin: 15px;
+		}
+
+		.box > img {
+			float: left;
+			width: 150px;
+			height: 150px;
+			margin-right: 15px;
+			border-radius: 15px;
+		}
+
+		.header > img {
+			float: left;
+			width: 150px;
+			height: 150px;
+			margin-right: 15px;
+			border-radius: 15px;
+		}
+
+		.box3 {
+			margin: 10px;
+			padding: 15px;
+			border-color: black;
+			background-color: orange;
+			border-radius: 15px;
+			overflow: visible;
+
+		}
+		.box3 > img {
+			float: right;
+			width: 150px;
+			height: 150px;
+			margin-right: 15px;
+			border-radius: 15px;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="header"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHDF4JpDCtTbstRRybryaRu-UyrkpOBSJJ0UE-8jfHUkdJHm7u"><h1>WEB FULLSTACK DEVELOPER</h1><h2>Culminaci&oacute;n de los Modulos HTML/CSS</h2></div>
+	<div>
+		<div class="columna" id=c1>
+			<p>Durante esta primera fase del precurso del bootcam fullstack he aprendido distintos conceptos y realizado diversos ejercicios desarrollando as&iacute; mis habilidades en lo que respecta a HTML y CSS</p>
+			<p>Esta pagina web es para documentar las distintas ense&ntilde;anzas aprendidas durante &eacute;stos m&oacute;dulos:</p>
+			<ul>
+				<caption><strong>HTML</strong></caption>
+				<li><a href="#estructura">Estructura de un documento html</a></li>
+				<li><a href="#DOM">Qu&eacute; es el DOM?</a></li>
+				<li><a href="#imagen">Insertar Imagenes</a></li>
+				<li><a href="#contenidos">Tratamiento Contenidos</a></li>
+				<li><a href="#enlaces">Tratamiento de enlaces</a></li>
+				<li><a href="#tiposElementos">Elementos en bloque y en Linea</a></li>
+				<li><a href="#maquetacion">Maquetaci&oacute; con DIV</a></li>
+				<li><a href="#tablas">Estructura de Tablas</a></li>
+				<li><a href="#entidades">Entidades y s&iacute;mbolos</a>
+			</ul>
+
+			<ul>
+				<caption><strong>CSS</strong></caption>
+				<li><a href="#htmlcss">HTML y CSS</a></li>
+				<li><a href="#syntaxis">Sintaxis CSS</a></li>
+				<li><a href="#caja"></a>El Box Model</li>
+				<li><a href="#selectores">Tipos de Selectores</a></li>
+				<li><a href="#diagramacion">Diagramaci&oacute;n CSS</a></li>
+			</ul>
+		</div>
+
+
+
+		<div class="columna" id="c2">
+			<div class="box"><a name="estructura"></a>
+				<img src="https://cdn-images-1.medium.com/max/1096/1*28-1lYrYTQoLhi87mllgBw.png">
+				<h4>Estructura de un documento html</h4>
+				<p>He aprendido sobre la esttructura basica de un documento HTML y las funciones de las principales etiquetas que nos son utiles para realizar una pagina web</p>
+				<p>Una estructura HTML se empieza con la etiqueta &lt;html&gt; y acaba con &lt;/html&gt;. Todo lo que esté en medio será la página web. Dentro de &lt;html&gt;&lt;/html&gt; se encuentran 2 partes diferenciadas.La primera &lt;head&gt;&lt;/head&gt; es la cabecera de la página. Aquí irán cierta información que no es directamente el contenido de la página. Aquí se pone el título de la página, los metadatos, estilos, código javascript (todo esto se estudiará en capítulos venideros). La primera que se suele estudiar es &lt;title&gt;&lt;/title&gt;, que indica el título de la página (lo que el navegador pone en la parte superior izquierda). La segunda parte es &lt;body&gt;&lt;/body&gt;. Aquí va propiamente el contenido de la página: fotos, párrafos, formularios, etc.</p>
+			</div>
+			<div class="box"><a name="DOM"></a>
+				<img src="http://cs.wellesley.edu/~cs110/reading/DOM-JQ-files/dom.png">
+				<h4>Qu&eacute; es el DOM?</h4>
+				<p>El DOM (Document Object Model en español Modelo de Objetos del Documento) es una API definida para representar e interactuar con cualquier documento HTML o XML. El DOM es un modelo de documento que se carga en el navegador web y que representa el documento como un árbol de nodos, donde cada nodo representa una parte del documento (puede tratarse de un elemento, una cadena de texto, o un comentario).</p>
+			</div>
+			<div class="box"><a name="imagen"></a>
+				<img class="minibox" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgYxw854mGOAp8f16evj_WYw_Ph385nUVygQdxHvuD9b3ueJxT0A">
+				<h4>Insertar Imagenes</h4>
+				<p>He aprendido que insertar una imagen es tan facil como seguir el siguiente comando</p>
+				<p> <pre><span style="font-weight: 400;">&lt;</span><span style="font-weight: 400;">img </span><span style="font-weight: 400;">src</span><span style="font-weight: 400;">="</span><span style="font-weight: 400;">img-tag-example-jpg.jpg</span><span style="font-weight: 400;">"</span> <span style="font-weight: 400;">alt</span><span style="font-weight: 400;">="</span><span style="font-weight: 400;">Mi imagen de prueba</span><span style="font-weight: 400;">"&gt;</span></pre> </p>
+				<p>Donde <i>src</i> representa la ruta de la imagen y <i>alt</i> una descripcion de la misma. Tambien podemos a&ntilde;adir otros elementos de estilo como <i>height</i> y <i>width</i>.</p>
+			</div>
+			<div class="box"><a name="contenidos"></a>
+				<img src="https://www.lifewire.com/thmb/81M21ZfabD9zCL_GtIQNBDVi1IA=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-182798262-57dc02755f9b58651672354f.jpg">
+				<h4>Tratamiento Contenidos</h4>
+				<p>Hemos visto como estructurar contenidos por sus encabezados o t&iacute;tulos y subt&iacute;tulos con las etiquetas &lt;hX&gt&lt;/hX&gt; donde X es igual a cualquier n&uacute;mero del 1 al 6.</p>
+				Tambi&eacute;n el tratamiento de textos bajo la estructura de un p&aacute;rrafo con la etiqueta &lt;p&gt;&lt;/p&gt;. Y la creaci&oacute;n de listas ordenadas y desordenadas.
+			</div>
+			<div class="box"><a name="enlaces"></a>
+				<img src="https://www.lifewire.com/thmb/JCA22vLciicqrdx6R7H1VvWoZls=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/browsing-the-web-116248249-5a7a3729eb97de00376e1677.jpg">
+				<h4>Tratamiento de enlaces</h4>
+				<p>Los enlaces (también conocidos con la estrambótica hipervínculos) hacen que podamos navegar de un documento a otro. Sin ellos, no habría esa magia y la web, como la conocemos, no tendría tanto sentido.</p>
+				<p>Que mejor manera de demostrar lo aprendido que a&ntilde;adiendo un enlace a mis pr&aacute;cticas sobre este asunto ya <a href="https://github.com/sepu85/NVL-HTML-P7a">documentadas en GitHub</a> </p>
+			</div>
+			
+			<div class="box"><a name="tiposElementos"></a>
+				<img src="https://cdn-images-1.medium.com/max/1600/1*AFeOAqXNJJdfYAjfXiJ9AQ.jpeg">
+				<h4>Elementos en bloque y en Linea</h4>
+				<p>Los elementos de bloque son aquellos que siempre crean un salto de línea y, por lo tanto, ocupan el espacio completo de lo que se llama el flujo de renderizado.</p>
+				<p>Los elementos en línea toman el espacio necesario sin romper hacia una nueva línea.</p>
+			</div>
+			<div class="box"><a name="maquetacion"></a>
+				<img src="https://i.stack.imgur.com/KRXUS.png">
+				<h4>Maquetaci&oacute;n con DIV</h4>
+				<p>La etiqueta DIV es la más utilizada como contenedor de otras etiquetas html. Es un contenedor a nivel de bloque por lo que puede incluir otros elementos de bloque dentro (por ejemplo párrafos) o elementos de línea. Agrupa y marca límites a nivel visual. Por lo que a la hora de maquetar podríamos identificarlo con el proceso de layout o diagramación visual de la página. Al ser un elemento de bloque, para representar dos divs hermanos, es decir, uno junto al otro, debemos recurrir a los estilos indicando alguna regla especial que garantice esa disposición en pantalla sin que rompa el flujo a una nueva línea.</p>
+			</div>
+			<div class="box"><a name="tablas"></a>
+				<img src="http://www.corelangs.com/html/tables/img/html-table-structure.png">
+				<h4>Estructura de tablas</h4>
+				<p>Es la forma de representar datos organizados con cierta estructura tabular: filas, columnas. Es representada con la etiqueta TABLE. La tabla tiene un montón de características, pero vamos a intentar resumir y simplificar su uso. Para ello, una tabla está compuesta, básicamente, de filas y columnas. Las filas son representadas por la etiqueta TR (table row) y las celdas dentro de la fila por TD. Una tabla puede contener una cabecera y, por tanto, dispondremos de alguna etiqueta que defina tanto el encabezamiento como la estructura de su cabecera. Para ello, usamos otras dos etiquetas adicionales: caption y TH (table header).</p>
+			</div>
+			<div class="box"><a name="entidades"></a>
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSamiqyea0L1RGr0En9qG9hUPm2lqs3-ZzQVMgoveQ5Pf5j3l_a">
+				<h4>Entidades y S&iacute;mbolos</h4>
+				<p>Hay ciertas entidades que, o bien por ser reservados para el propio HTML, o bien porque no se encuentran fácilmente visibles, debemos representar de cierta manera.Si, por ejemplo, queremos representar el símbolo mayor -o menor- que, tendríamos un problema con el propio marcado de las etiquetas. Por lo que, el llamado <i>token parser</i> tendría problemas de entendimiento.</p>
+			</div>
+
+			<div class="box"><a name="htmlcss"></a>
+				<img src="https://datashoptalk.com/wp-content/uploads/2018/02/CSS.png">
+				<h4>HTML y CSS</h4>
+				<p>Hay tres maneras distintas de aplicar CSS a un documento HTML, unas más prácticas que otras. </p>
+				<p>Se puede agregar estilos CSS a un documento html mediante ficheros externos referenciando ambos documentos mediante la llamada "ruta relativa"</p>
+				<p>Tambien se puede estilizar nuestro fichero html desde el header del mismo, declarando el dise&ntilde;o CSS dentro de la etiqueta <i>style</i> en el <i>head</i> del fichero.</p>
+				<p>La ultima, pero que en ficheros complejos es menos recomendada, se puede a;adir el estilo a determinado elemento declarando el dise&ntilde;o dentro de su propia etiqueta.</p>
+			</div>
+
+			<div class="box"><a name="syntaxis"></a>
+				<img src="https://www.w3schools.com/css/selector.gif">
+				<h4>Sintaxis CSS</h4>
+				<p>Cualquier objeto (siempre entendiendo éste desde una perspectiva técnica y más concretamente de programación orientada a objetos) se compone de atributos (o propiedades) y valores para esas propiedades.</p>
+				<p>Las declaraciones están agrupadas por bloques, en los que el conjunto de declaraciones se encuentra enumerado entre llaves, uno inicial ( { ) y otro final ( } ).</p>
+				<p>Para identificar los elementos a los que afectará nuestro bloque declarativo debemos a&ntilde;adir a cada bloque declarativo un prefijo a modo de selector — un módulo que identificará a ciertos elementos de nuestra página. Las declaraciones asociadas se aplicarán solo a estos elementos. El selector más el bloque declarativo se llama regla o regla-conjunto.</p>
+			</div>
+
+			<div class="box"><a name="caja"></a>
+				<img src="http://web.simmons.edu/~grovesd/comm244/notes/week6/box-model.gif">
+				<h4>El Box Model</h4>
+				<p>El box model (o modelo de caja como indica la traducción de su nombre) es un modelo, o patrón, de representación de contenedores de contenido. Está compuesto por una serie de actores que permiten que estos contenedores definan ciertos atributos importantes a la hora de marcar espacios, bordes, etc.</p>
+				<ul>
+					<li><strong>Margin area:</strong> es la que se encuentra más exteriormente y define el margen externo que dejarán los elementos. Se puede descomponer en top, right, bottom, left. Por lo que podemos atacar las reglas css de manera genérica (global) al margin, o enfocada a una de sus partes. Por ejemplo, margin-top.</li>
+					<li><strong>Padding area:</strong> es la que se encuentra más interiormente y define el margen interno que dejarán los elementos entre el contenido y el borde. Se puede descomponer en top, right, bottom, left. Por lo que podemos atacar las reglas css de manera genérica (global) al padding, o enfocada a una de sus partes. Por ejemplo, padding-top.</li>
+					<li><strong>Border area:</strong> Es el borde que se le aplicará al elemento y se encuentra entre el contenido y después del padding si lo tuviera y antes de el margin. Se puede descomponer en top, right, bottom, left. Por lo que podemos atacar las reglas css de manera genérica (global) al border, o enfocada a una de sus partes. Por ejemplo, border-top.</li>
+					<li><strong>Content area:</strong> es donde se encuentra el contenido en sí mismo, ya sea: una imagen, un vídeo, texto, etc. </li>
+				</ul>
+			</div>
+
+			<div class="box"><a name="selectores"></a>
+				<img src="https://internetingishard.com/html-and-css/hello-css/external-css-styles-b073ea.png">
+				<h4>Tipos de Selectores</h4>
+				<p>	Disponemos de gran variedad de selectores CSS, que proporcionan mucha precisión para seleccionar el elemento deseado.</p>
+				<ul>
+					<li><strong>Selectores simples:</strong> Seleccionan los elementos por el nombre del tipo de elemento, class, o su id.</li>
+					<li><strong>Selectores de atributos:</strong> Seleccionan los elementos por los valores de sus atributos.</li>
+					<li><strong>Pseudo-clases:</strong> Seleccionan los elementos por el estado en que se encuentran, cómo haber aparecido al pasar el ratón, o el tic deshabilitado o seleccionado, o por ser el primer hijo de su padre en el árbol DOM.</li>
+					<li><strong>Pseudo-elementos:</strong> Selecciona los elementos por su situación en relación a otro elemento, por ejemplo: la primera palabra de cada párrafo, o el contenido que se encuentra justo después de un elemento.</li>
+					<li><strong>Combinaciones:</strong> No son en sí mismos selectores, sino formas de combinar dos o más selectores de forma práctica para una selección especial. Por ejemplo, se pueden seleccionar párrafos que sean descendientes de divs, o párrafos situados justo después de títulos.</li>
+					<li><strong>Selectores múltiples:</strong> Tampoco son selectores en sí mismos; podemos agrupar múltiples selectores en la misma regla CSS separados por comas, para aplicarlos a una de las declaraciones o a todos los elementos seleccionados por estos selectores.</li>
+				</ul>
+			</div>
+			<div class="box"><a name="diagramacion"></a>
+				<img src="https://css-tricks.com/wp-content/csstricks-uploads/web-text-wrap.png">
+				<h4>Diagramaci&oacute;n CSS</h4>
+				<p>Cuando utilizas CSS para crear un diseño, lo que está haciendo es alejar los elementos de este flujo normal, sin embargo, para muchos de los elementos en su página, este flujo normal creará exactamente el diseño que necesita. Esta es la razón por la cual comenzar con un documento HTML bien estructurado es tan importante, ya que puede trabajar con la forma en que las cosas se presentan por defecto en lugar de luchar contra ella.</p>
+				<p></p>
+			</div>
+
+
+
+		</div>
+		<div class="columna" id="c3">Art&iacute;culos destacados
+			<div class="box3">
+				<h4>Estructura básica de una página Web - html, head y body></h4>
+					<img src="https://disenowebakus.net/imagenes/articulos/estructura-basica-de-una-pagina-web-en-html.jpg">
+				<p>Para crear una página web se necesita un documento HTML utilizando tres elementos o tags principales que cualquier sitio Web usa: html, head y body.</p>
+				<p>Un documento web (o página web) es, como hemos apuntado en la introducción, un conjunto de tags HTML que se escriben en un editor de texto plano (sin formato) y... <a href="https://disenowebakus.net/domine-html-y-dhtml-primeros-pasos.php">ver m&aacute;s...</a></p> 
+			</div>
+			
+			<div class="box3">
+				<h4>Todo sobre los enlaces en HTML </h4>
+				<img src="https://www.campusmvp.es/recursos/image.axd?picture=/2017/4T/enlaces-en-html.png">
+				<p>Siempre me ha parecido que, una de las cosas más agradecidas de los documentos HTML de la web, aparte de poder insertar imágenes o vídeos, está en la posibilidad de crear hipervínculos o enlaces entre ellos. De hecho, creo que esta es una de las características que más puede emocionar y motivar a los novatos que jamás han tocado código ni con un palo y que deciden adentrarse en el mundo del desarrollo web. De repente, escribes cuatro líneas de HTML y, ¡zas!, eres capaz de añadir interactividad a un simple texto. Dado que estás viendo este post, deduzco que ahora mismo estás dando tus primeros pasos con HTML, así que... <a href="https://www.campusmvp.es/recursos/post/como-insertar-enlaces-en-html.aspx">ver m&acute;s...</a> </p>
+			</div>
+
+			<div class="box3">
+				<h4>Estructura o Layout / CSS</h4>
+				<img src="https://www.campusmvp.es/recursos/post/como-insertar-enlaces-en-html.aspx">
+				<p>El objetivo de este diseño es definir una estructura de página con cabecera y pie, un menú lateral de navegación y una zona de contenidos. La anchura de la página se fija en 700px, la anchura del menú es de 150px y la anchura de los contenidos es de 550px.</p>
+				<p>La solución CSS se basa en el uso de la propiedad float para los elementos posicionados como el menú y los contenidos y el uso de la propiedad clear en el pie de página para evitar los solapamientos ocasionados por los elementos posicionados con... <a href="https://uniwebsidad.com/libros/css/capitulo-12/estructura-o-layout">ver m&acute;s...</a></p>
+			</div>
+
+
+
+		</div>
+
+
+
+	</div>
+	<div class="footer">&copy; 2019 - Gustavo Segovia - Creative Commons</div>
+</body>
+</html>
